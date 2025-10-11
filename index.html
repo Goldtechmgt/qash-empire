@@ -1,348 +1,185 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Qashempire — Register | Login</title>
-  <meta name="description" content="QashEmpire — multiple ways to earn: watch paid videos, answer questions, spin for rewards, click ads, trade Forex, invite friends." />
-  <meta name="keywords" content="Qash Empire, qash-empire, Qashempire, qashempire, SuperQash connections, superqash, QASHEMPIRE, Qash-Empire Connections, earn online Uganda, Cameroon, Burkina Faso, Botswana, online income FCFA, TikTok QashEmpire">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Qashempire Connections, Wiz25">
+  <title>Qash Empire — Register | Login</title>
+  <meta name="description" content="Qash Empire: complete simple tasks and earn — watch videos, answer questions, spin, click ads, trade & invite friends." />
+<meta name="keywords" content="Qash Empire, qashempire,qash-empire, online earning platform, make money online, earn from home, digital income, passive income">
+    <meta name="author" content="Qash Empire Connections">
 
   <style>
     :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa6bf;
-      --accent1:#ff7aa2; /* pink */
-      --accent2:#ffb86b; /* orange */
-      --accent3:#6ee7b7; /* green */
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#06b6d4; --accent-2:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px;
+      color-scheme: dark;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071026 0%, #071428 60%);color:#e6eef8}
-    .wrap{max-width:1100px;margin:32px auto;padding:28px}header{display:flex;align-items:center;gap:18px;margin-bottom:22px}
-.logo{width:74px;height:74px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:0 6px 30px rgba(0,0,0,0.6);font-weight:700}
-.logo small{font-size:11px;color:#081128}
-h1{margin:0;font-size:24px}
-p.lead{color:var(--muted);margin:6px 0 0}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071022 0%, #071424 100%); color:#e6eef6}
+    .container{max-width:var(--maxw);margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo span{font-size:20px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    h1{font-size:28px;margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#031018}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.grid{grid-template-columns:1fr}}
+    /* cards grid */
+    .tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .task{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .task h3{margin:0 0 6px;font-size:16px}
+    .task p{margin:0;color:var(--muted);font-size:13px}
+    .task .small{margin-top:12px;font-size:13px;color:var(--muted)}
 
-.card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:18px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(2,6,23,0.6);transition:transform .18s ease, box-shadow .18s ease}
-.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(3,8,30,0.6)}
+    /* sidebar panel */
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .panel h4{margin:0 0 12px}
+    .stat{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
+    .stat:last-child{border-bottom:0}
+    .muted{color:var(--muted)}
 
-.card-head{display:flex;align-items:center;gap:14px}
-.icon-wrap{width:68px;height:68px;border-radius:12px;display:grid;place-items:center}
-.title{font-weight:700;margin:0}
-.muted{color:var(--muted);font-size:13px;margin-top:6px}
+    /* features */
+    .features{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .feature{background:var(--glass);padding:14px;border-radius:10px}
 
-.desc{margin:12px 0 0;line-height:1.45;color:#d8e6fb}
+    footer{margin-top:34px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
 
-.badge{display:inline-block;padding:6px 9px;border-radius:999px;font-weight:600;font-size:12px}
+    /* floating Whatsapp */
+    .whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,0.14);text-decoration:none}
+    .whatsapp svg{filter:drop-shadow(0 2px 6px rgba(2,6,23,0.6))}
 
-.accent-pink{background:linear-gradient(90deg,var(--accent1),#ff9ec0);color:#081128}
-.accent-orange{background:linear-gradient(90deg,var(--accent2),#ffd29b);color:#081128}
-.accent-green{background:linear-gradient(90deg,var(--accent3),#8fffcf);color:#083126}
-
-footer{margin-top:22px;color:var(--muted);font-size:13px}
-
-/* small utilities */
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.btn{padding:8px 12px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-.btn-primary{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#081128}
-
-/* nice list for details */
-.detail-list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
-.detail-list li{margin:6px 0}
-
-.whatsapp-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:.6rem;
-  padding:.6rem 1rem;
-  border-radius:30px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-}
-.whatsapp-btn svg{ width:20px; height:20px; display:block; }   
- 
+    /* responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .tasks{grid-template-columns:repeat(2,1fr)}
+      .container{padding:18px}
+    }
+    @media(max-width:600px){
+      .tasks{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      nav{margin-top:8px}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
-      <div class="logo">
-        <div style="text-align:center">
-          <div style="font-size:18px">QE</div>
-          <small>Qashempire</small>
+      <div class="brand">
+        <div class="logo"><span>QE</span></div>
+        <div>
+          <div style="font-weight:700">HelaLink</div>
+          <div class="muted" style="font-size:12px">Earn by completing simple tasks</div>
         </div>
-        <br>
       </div>
-      <div>
-        <h1> Qashempire — Ways to Earn</h1>
-        <br>
-        <p class="lead">Simple, proven earning activities. Click any card to read quick tips and best practices.</p>
-      </div>
-      
+      <nav>
+        <a class="btn btn-outline" href="https://qash-empire.com/reg/Wiz25" target="_blank">Sign up</a>
+      </nav>
     </header>
-  <div><a href="https://qash-empire.com/reg/Wiz25" target="_blank">
-  <button style="
-    background-color: #ff6600; 
-    color: white; 
-    padding: 12px 24px; 
-    font-size: 18px; 
-    border: none; 
-    border-radius: 8px; 
-    cursor: pointer;">
-    Register Now
-  </button>
-  </a>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Earn real money with simple online tasks</h1>
+        <p class="lead">Watch videos, answer quick questions, spin the daily wheel, click ads, try forex micro-tasks, invite friends and claim bonuses — everything in one place.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://qash-empire.com/reg/Wiz25" target="_blank">Get Started — Sign Up</a>
+          <a class="btn btn-outline" href="#tasks">See Tasks</a>
+          <a class="btn btn-outline" href="https://wa.me/971502467098?text=Hello%20coach%20am%20interested%20in%20Qash%20Empire%20%20please%20link%20me%20up" target="_blank">Contact Coach</a>
+        </div>
+
+        <div id="tasks" class="tasks">
+          <article class="task">
+            <h3>Watch Paid YouTube Videos</h3>
+            <p>Earn a fixed reward for each verified video watched for the required duration.</p>
+            <div class="small muted">Payouts: per-video | Time: 30s–120s</div>
+          </article>
+
+          <article class="task">
+            <h3>Watch TikTok Videos</h3>
+            <p>Quick short-video tasks — watch and confirm to get paid.</p>
+            <div class="small muted">Payouts: micro-tasks | Mobile friendly</div>
+          </article>
+
+          <article class="task">
+            <h3>Answer Questions</h3>
+            <p>Complete short surveys and quizzes. Higher rewards for longer surveys.</p>
+            <div class="small muted">Payouts: per-question/survey</div>
+          </article>
+
+          <article class="task">
+            <h3>Free Spinning Wheel</h3>
+            <p>Spin daily to win cash, bonuses, or extra tasks. Free once per day.</p>
+            <div class="small muted">Daily: 1 free spin | Bonus prizes</div>
+          </article>
+
+          <article class="task">
+            <h3>Ad Clicks & Offers</h3>
+            <p>Click and interact with sponsored offers for rewards. Follow offer rules.</p>
+            <div class="small muted">Payouts vary by offer</div>
+          </article>
+
+          <article class="task">
+            <h3>Invite Friends</h3>
+            <p>Earn referral commissions when invited users sign up and complete tasks.</p>
+            <div class="small muted">Referral bonus & lifetime commission</div>
+          </article>
+        </div>
+
+        <div class="features">
+          <div class="feature"><strong>Welcome Bonus</strong><div class="muted" style="font-size:13px;margin-top:6px">Claim a welcome bonus when you sign up using the Sign Up button.</div></div>
+          <div class="feature"><strong>Daily Bonuses</strong><div class="muted" style="font-size:13px;margin-top:6px">Daily login rewards, streak multipliers and surprise drops.</div></div>
+          <div class="feature"><strong>Secure Payouts</strong><div class="muted" style="font-size:13px;margin-top:6px">Withdraw via supported methods after reaching the minimum payout.</div></div>
+          <div class="feature"><strong>Support</strong><div class="muted" style="font-size:13px;margin-top:6px">Contact the coach directly on WhatsApp for help and fast onboarding.</div></div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <h4>Your Dashboard (Preview)</h4>
+        <div class="stat"><div>
+          <div style="font-weight:700">Balance</div>
+          <div class="muted">$0.00</div>
+        </div><div style="font-weight:700">—</div></div>
+
+        <div class="stat"><div>
+          <div style="font-weight:700">Daily Spin</div>
+          <div class="muted">Ready</div>
+        </div><div style="font-weight:700">Spin</div></div>
+
+        <div class="stat"><div>
+          <div style="font-weight:700">Referrals</div>
+          <div class="muted">0 invited</div>
+        </div><div style="font-weight:700">Invite</div></div>
+
+        <div style="margin-top:14px;text-align:center">
+          <a class="btn btn-primary" href="https://qash-empire.com/reg/Wiz25" target="_blank">Create Account</a>
+        </div>
+
+        <div style="margin-top:16px;font-size:13px;color:var(--muted)">Note: This is a static demo. Connect to your task backend to make tasks live.</div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Qash Empire</strong> — Start earning with small tasks today.
+      </div>
+      <div style="font-size:13px;color:var(--muted)">Need help? <a style="color:var(--accent);text-decoration:none" href="https://wa.me/971502467098?text=Hello%20coach%20am%20interested%20in%20Qash%20Empire%20%20please%20link%20me%20up" target="_blank">Contact on WhatsApp</a></div>
+    </footer>
   </div>
-    <main>
-  <div class="grid">
-    <!-- Paid YouTube Videos -->
-    <article class="card" id="yt">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent1),#ffb3c6)">
-          <!-- SVG YouTube style -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path d="M23.5 6.2a2.9 2.9 0 0 0-2-2C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.5.6a2.9 2.9 0 0 0-2 2A30 30 0 0 0 0 12a30 30 0 0 0 .6 5.8 2.9 2.9 0 0 0 2 2c1.9.6 9.5.6 9.5.6s7.6 0 9.5-.6a2.9 2.9 0 0 0 2-2A30 30 0 0 0 24 12a30 30 0 0 0-.5-5.8z" fill="#fff" opacity=".12"/>
-            <path d="M9.8 15.2V8.8l5.2 3.2-5.2 3.2z" fill="#081128"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Watch Paid YouTube Videos</div>
-          <div class="muted">Earn by watching sponsored videos & ads</div>
-        </div>
-      </div>
-      <p class="desc">Get paid to watch selected YouTube videos. Typically each video pays a small amount — watch fully, follow any instructions (like liking or commenting) and mark it complete to receive the reward.</p>
-      <ul class="detail-list">
-        <li>Tips: Watch at normal speed, complete any required actions exactly.</li>
-        <li>Payouts: Small per-video amounts; volume matters.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">How it works</button><a href="https://qash-empire.com/reg/Wiz25"</a><button class="btn btn-primary">Start Watching</button></div>
-    </article>
 
-    <!-- Paid TikTok Videos -->
-    <article class="card" id="tt">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent2),#ffdcb3)">
-          <!-- SVG TikTok-like -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path d="M12 2v12.2a3.6 3.6 0 0 1-3.6-3.6A3.6 3.6 0 0 1 12 7V2h3.2c1.2 0 2 .9 2 2v.6a5.2 5.2 0 0 1-5.2 5.2V8.8" fill="#081128" opacity=".95"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Watch Paid TikTok Videos</div>
-          <div class="muted">Short vertical videos that pay per view</div>
-        </div>
-      </div>
-      <p class="desc">Short-form content often pays quicker because videos are short. You may need to watch to a minimum watch time, engage, or follow creator pages to earn.</p>
-      <ul class="detail-list">
-        <li>Tips: Let videos play fully and avoid skipping.</li>
-        <li>Good for: mobile-first users, short-sessions earning.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">How it works</button><a href="https://qash-empire.com/reg/Wiz25"</a><button class="btn btn-primary">Start Watching</button></div>
-    </article>
-
-    <!-- Answering Questions -->
-    <article class="card" id="qa">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent3),#bfffe5)">
-          <!-- SVG question -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" fill="#081128" opacity=".07"/>
-            <path d="M11 17h2v2h-2zM11.2 7.5c.4-.8 1.4-1.5 2.8-1.5 1.9 0 3 1.3 3 3v1c0 1.9-2 2.4-2.8 2.8-.8.4-1.2.9-1.2 1.9v.8h-2v-.5c0-1.7.8-2.5 1.6-2.9.8-.4 1.9-.7 1.9-1.8v-1c0-1-.6-1.2-1-1.2-.9 0-1.3.4-1.3.4" fill="#081128"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Answer Questions</div>
-          <div class="muted">Provide quick answers, quizzes, or surveys</div>
-        </div>
-      </div>
-      <p class="desc">Complete short quizzes, surveys or answer one-off questions. Payments vary by complexity — higher-paying tasks require more accurate or longer answers.</p>
-      <ul class="detail-list">
-        <li>Tips: Read questions carefully; accuracy often determines payout.</li>
-        <li>Payouts: Higher for specialized or long-form responses.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">How it works</button><a href="https://qash-empire.com/reg/Wiz25"</a><button class="btn btn-primary">Answer Now</button></div>
-    </article>
-
-    <!-- Free Spinning -->
-    <article class="card" id="spin">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,#d9b3ff,var(--accent1))">
-          <!-- SVG wheel -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" fill="#081128" opacity=".06"/>
-            <path d="M12 5v7l3 1" stroke="#081128" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Free Spinning (Daily)</div>
-          <div class="muted">Spin wheel to win coins, credits, or prizes</div>
-        </div>
-      </div>
-      <p class="desc">A daily or hourly spin gives a chance to win bonus credits, cash, or multiplier boosts. Best used as a way to compound small daily earnings into larger rewards.</p>
-      <ul class="detail-list">
-        <li>Tips: Use daily to increase chances; watch for bonus days with higher rewards.</li>
-        <li>Good for: boosting earnings and keeping users returning.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">How it works</button><a href="https://qash-empire.com/reg/Wiz25"</a><button class="btn btn-primary">Spin Now</button></div>
-    </article>
-
-    <!-- Ad Clicking -->
-    <article class="card" id="ads">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,#89b6ff,#a8d0ff)">
-          <!-- SVG cursor -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-            <path d="M3 3l18 9-18 9V3z" fill="#081128" opacity=".06"/>
-            <path d="M7 7h10v4H7z" fill="#081128"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Ad Clicking / Engagement</div>
-          <div class="muted">Click ads, view landing pages, or complete micro-tasks</div>
-        </div>
-      </div>
-      <p class="desc">Click-through tasks usually require you to visit an advertiser page and stay for a minimum time. These tasks pay small amounts but scale with volume.</p>
-      <ul class="detail-list">
-        <li>Tips: Follow task rules exactly (min time, specific actions).</li>
-        <li>Security: Never provide personal or sensitive info while doing ad tasks.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">How it works</button><button class="btn btn-primary">View Tasks</button></div>
-    </article>
-
-    <!-- Forex Trading -->
-    <article class="card" id="forex">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,#c7f3ff,#9fe6ff)">
-          <!-- SVG chart -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-            <path d="M3 17l4-6 4 4 6-10 4 6" stroke="#081128" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Forex Trading (Advanced)</div>
-          <div class="muted">Trade currency pairs — higher risk, higher reward</div>
-        </div>
-      </div>
-      <p class="desc">Forex is a leveraged market where careful strategy, risk management, and education are essential. Only use funds you can afford to lose and learn with demo accounts first.</p>
-      <ul class="detail-list">
-        <li>Tips: Start with demo trading, use stop-losses, and never trade with borrowed money.</li>
-        <li>Risk: High — require knowledge and caution.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">Learn Trading</button><a href="https://qash-empire.com/reg/Wiz25"</a><button class="btn btn-primary">Open Demo</button></div>
-    </article>
-
-    <!-- Invite Friends -->
-    <article class="card" id="invite">
-      <div class="card-head">
-        <div class="icon-wrap" style="background:linear-gradient(135deg,#ffd6b3,#ffd6b3)">
-          <!-- SVG invite -->
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-            <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 8v-1a4 4 0 0 0-4-4H10a4 4 0 0 0-4 4v1" stroke="#081128" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div>
-          <div class="title">Invite Friends (Referral)</div>
-          <div class="muted">Earn bonuses for successful referrals</div>
-        </div>
-      </div>
-      <p class="desc">Share your referral link and get rewards when friends sign up and complete qualifying actions. Referral bonuses can be a steady passive income when you have many active users.</p>
-      <ul class="detail-list">
-        <li>Tips: Share in niche groups, explain how to get started to increase conversion.</li>
-        <li>Terms: Check qualifying actions; some invites only count after activity.</li>
-      </ul>
-      <div class="actions"><button class="btn btn-ghost">Referral Terms</button><a href="https://qash-empire.com/reg/Wiz25"</a><button class="btn btn-primary">Copy Invite Link</button></div>
-    </article>
-  </div>
-    <div>
-      <p>
-    <a class="whatsapp-btn" href="https://wa.me/971502467098?text=Hi%2C%20Am%20interested%20in%20on%20QashEmpire." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"></p>
-  <!-- WhatsApp icon (inline SVG) -->
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.373 0 .01 5.373.01 12c0 2.11.552 4.165 1.6 5.98L0 24l6.24-1.63A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.25-6.2-3.48-8.52z" fill="#25D366"/>
-    <path d="M17.11 14.45c-.31-.16-1.83-.9-2.12-1-.29-.11-.5-.16-.71.16-.2.31-.79 1-.97 1.2-.18.21-.36.24-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.36.46-.54.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.35-.26-.62-.52-.54-.71-.55-.18-.01-.39-.01-.6-.01-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63s1.13 3.04 1.29 3.25c.16.21 2.23 3.47 5.4 4.86 3.17 1.39 3.17.93 3.75.87.58-.06 1.92-.78 2.19-1.53.27-.75.27-1.39.19-1.53-.08-.14-.29-.21-.6-.37z" fill="#fff"/>
-  </svg>
-  Contact via WhatsApp
-    </a>
-
-  </div>
-      <!-- Floating Social Bar (YouTube, TikTok, Facebook) -->
-<div class="floating-social">
-  <a class="social youtube" href="https://www.youtube.com/@Earnfromhome5" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-    <svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1C16.6 2.3 12 2.3 12 2.3h-.1s-4.6 0-8.5.5c-.4 0-1.3.1-2.1 1C.7 4.5.5 6.2.5 6.2S.1 8.5.1 10.8v2.4c0 2.3.4 4.6.4 4.6s.2 1.7.8 2.4c.8.9 1.9.9 2.4 1 1.7.2 7.2.5 7.2.5s4.6 0 8.5-.5c.4 0 1.3-.1 2.1-1 .6-.7.8-2.4.8-2.4s.4-2.3.4-4.6V10.8c0-2.3-.4-4.6-.4-4.6zM9.8 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+  <!-- Floating WhatsApp button -->
+  <a class="whatsapp" href="https://wa.me/971502467098?text=Hello%20coach%20am%20interested%20in%20Qash%20Empire%20%20please%20link%20me%20up" target="_blank" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.52 3.48A11.95 11.95 0 0012 0C5.373 0 .01 5.373 0 12c0 2.11.557 4.173 1.614 5.997L0 24l6.246-1.593A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12 0-3.202-1.247-6.202-3.48-8.52z" fill="#fff" fill-opacity="0.04"/>
+      <path d="M17.472 14.382c-.297-.148-1.758-.867-2.03-.967-.273-.099-.473-.148-.673.148-.198.297-.768.966-.942 1.165-.173.198-.347.223-.644.074-.297-.148-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.15-.173.2-.297.3-.495.099-.198.05-.371-.025-.52-.075-.148-.673-1.62-.923-2.217-.243-.579-.49-.5-.673-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.212 3.074c.149.198 2.095 3.2 5.076 4.487  .709.306 1.26.488 1.693.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.273-.198-.57-.347z" fill="#fff"/>
+    </svg>
   </a>
 
-  <a class="social tiktok" href="https://www.tiktok.com/@earnfromhome5" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-    <svg viewBox="0 0 24 24"><path d="M9 3v10.7a3.7 3.7 0 1 0 3.7-3.7V3h-3.7zM18 8.6c-1.1 0-2-.3-2.9-.8v6.1a6 6 0 1 1-6-6V6.2c1.1.7 2.5 1.1 3.9 1.1V9c1.6 0 3.2-.5 4.5-1.4v1.9c-.9.6-2 1-3.5 1.1z"/></svg>
-  </a>
-
-  <a class="social facebook" href="https://www.facebook.com/61580986572024/posts/pfbid0oyziE5nKdu5RoVjs3iiMZT2afmTvSsUUop2PyKDekBUotE7ev7NXidZNRwi7Gp4el/?app=fbl" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-    <svg viewBox="0 0 24 24"><path d="M22 12.1C22 6.5 17.5 2 11.9 2S1.8 6.5 1.8 12.1c0 4.8 3.3 8.8 7.8 9.7v-6.9H7.3v-2.8h2.3V9.4c0-2.3 1.4-3.6 3.4-3.6.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.4l-.4 2.8h-2v6.9c4.5-.9 7.8-4.9 7.8-9.7z"/></svg>
-  </a>
-</div>
-
-<style>
-/* Floating social bar */
-.floating-social {
-  position: fixed;
-  top: 40%;
-  left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1000;
-}
-
-.floating-social .social {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.15);
-  transition: transform .2s ease, box-shadow .2s ease;
-  text-decoration: none;
-  color: inherit;
-}
-
-.floating-social .social svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-/* Hover brand colors */
-.floating-social .youtube:hover { color: #FF0000; transform: scale(1.1); box-shadow: 0 4px 14px rgba(255,0,0,0.3);}
-.floating-social .tiktok:hover { color: #000000; transform: scale(1.1); box-shadow: 0 4px 14px rgba(0,0,0,0.3);}
-.floating-social .facebook:hover { color: #1877F2; transform: scale(1.1); box-shadow: 0 4px 14px rgba(24,119,242,0.3);}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark){
-  .floating-social .social { background: rgba(255,255,255,0.08); }
-}
-</style>
-
-  <footer>
-    <p>Tip: combine quick tasks (videos, spins, ad clicks) with higher-value activities (answering questions, referrals, trading) for steady growth. Always follow platform rules and prioritize account safety.</p>
-  </footer>
-
-</main>
-
-  </div>
 </body>
-        </html>
+</html>
+
